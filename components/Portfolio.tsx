@@ -15,7 +15,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
   const t = TRANSLATIONS[language].portfolio;
 
   return (
-    <section id="portfolio" className="py-24 bg-black/30 relative overflow-hidden">
+    <section id="portfolio" className="py-24 bg-black/30 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2 
@@ -36,12 +36,11 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
             <motion.div
               key={item.id}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
               layoutId={item.id}
               onClick={() => setSelectedItem(item)}
-              className={`group relative rounded-2xl overflow-hidden cursor-pointer ${index === 1 || index === 4 ? 'md:col-span-1 md:row-span-1' : ''}`}
+              className={`group relative rounded-2xl overflow-visible cursor-pointer ${index === 1 || index === 4 ? 'md:col-span-1 md:row-span-1' : ''}`}
             >
               <img 
                 src={item.imageUrl} 
