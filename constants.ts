@@ -322,6 +322,17 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     avatar: "https://picsum.photos/seed/bhavya_face/100/100",
   },
+  {
+    id: "t5",
+    name: "R. Venkat Reddy",
+    role: { en: "", te: "" },
+    company: "Pace",
+    quote: { 
+      en: "Outstanding work on our branding and digital presence. Rolex Ads delivered exceptional designs that truly represent our brand.", 
+      te: "మా బ్రాండింగ్ మరియు డిజిటల్ ప్రెజెన్స్‌పై అద్భుతమైన పని. రోలెక్స్ యాడ్స్ మా బ్రాండ్‌ను నిజంగా ప్రాతినిధ్యం చేసే అద్భుతమైన డిజైన్‌లను అందించింది." 
+    },
+    avatar: "https://picsum.photos/seed/pace_face/100/100",
+  },
 ];
 
 export const STATS: Stat[] = [

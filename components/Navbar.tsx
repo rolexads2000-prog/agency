@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { Menu, X, Globe, ChevronRight } from 'lucide-react';
 import { TRANSLATIONS, WHATSAPP_NUMBER } from '../constants';
 import { useLanguage } from './LanguageContext';
-import rolexLogo from '../assets/rolexadslogo.png';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +15,10 @@ const Navbar: React.FC = () => {
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ['rgba(255,255,255,0.9)', 'rgba(255,255,255,1)']
+    ['rgba(255, 255, 255, 0.95)', 'rgba(255, 255, 255, 0.98)']
   );
-  const backdropBlur = useTransform(scrollY, [0, 50], ['blur(8px)', 'blur(12px)']);
-  const borderColor = useTransform(scrollY, [0, 50], ['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.08)']);
+  const backdropBlur = useTransform(scrollY, [0, 50], ['blur(0px)', 'blur(16px)']);
+  const borderColor = useTransform(scrollY, [0, 50], ['rgba(0,0,0,0.05)', 'rgba(0,0,0,0.1)']);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +79,7 @@ const Navbar: React.FC = () => {
     <>
       <motion.nav
         style={{ backgroundColor, backdropFilter: backdropBlur, borderBottomColor: borderColor }}
-        className="fixed top-0 left-0 right-0 z-50 h-20 border-b transition-colors duration-300 flex items-center"
+        className="fixed top-0 left-0 right-0 z-50 h-20 border-b border-transparent transition-colors duration-300 flex items-center"
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
@@ -92,7 +91,7 @@ const Navbar: React.FC = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <img src={rolexLogo} alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" />
+            <img src="/assets/rolexadslogo.png" alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" />
           </a>
 
           {/* Desktop Links */}
@@ -110,7 +109,7 @@ const Navbar: React.FC = () => {
             
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-rolex-red transition-colors bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200 hover:border-gray-300"
+              className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-rolex-red transition-colors bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200 hover:border-rolex-red"
             >
               <Globe size={14} />
               {language === 'en' ? 'EN' : 'TE'}
@@ -132,14 +131,14 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center gap-4">
             <button 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 text-sm font-bold text-white bg-white/10 px-3 py-1.5 rounded-full border border-white/10"
+              className="flex items-center gap-1 text-sm font-bold text-gray-700 bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200"
             >
               <Globe size={14} />
               {language === 'en' ? 'EN' : 'TE'}
             </button>
             <button 
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="text-gray-800 p-2 hover:bg-gray-100 rounded-full transition-colors z-50 relative"
+              className="text-gray-700 p-2 hover:bg-gray-100 rounded-full transition-colors z-50 relative"
             >
               {isMobileOpen ? <X size={28} /> : <Menu size={28} />}
             </button>

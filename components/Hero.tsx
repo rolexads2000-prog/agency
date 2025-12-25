@@ -14,6 +14,7 @@ const CLIENTS = [
   { name: "Synthite", logo: "/assets/synthite.png" },
   { name: "CMR Shopping Mall", logo: "/assets/cmrmall.png" },
   { name: "Sri Bhavya", logo: "/assets/sribhavya.png" },
+  { name: "Pace", logo: "/assets/pace.png" },
 ];
 
 const Hero: React.FC = () => {

@@ -4,7 +4,7 @@ import { PORTFOLIO_ITEMS, TRANSLATIONS } from '../constants';
 import { PortfolioItem } from '../types';
 import { X, ExternalLink } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
-
+import logo from '../assets/logo.png';
 interface PortfolioProps {
   onInquire: (item: PortfolioItem) => void;
 }
