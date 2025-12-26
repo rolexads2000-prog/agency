@@ -13,8 +13,8 @@ const CLIENTS = [
   { name: "Canara Bank", logo: "/assets/canara.webp" },
   { name: "Synthite", logo: "/assets/synthite.webp" },
   { name: "CMR Shopping Mall", logo: "/assets/cmrmall.webp" },
-  { name: "Sri Bhavya", logo: "/assets/sribhavya.png" },
-  { name: "Pace", logo: "/assets/pace.png" },
+  { name: "Sri Bhavya", logo: "/assets/sribhavya.webp" },
+  { name: "PACE Institute", logo: "/assets/pace.webp" },
 ];
 
 const Hero: React.FC = () => {
