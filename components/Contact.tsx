@@ -242,7 +242,7 @@ const Contact: React.FC = () => {
                     <p className="text-white italic text-sm relative z-10">"{t.quoteText}"</p>
                     <div className="mt-4 flex items-center gap-3 relative z-10">
                         <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden">
-                             <img src="/assets/pace.png" alt="PACE Institute" className="w-full h-full object-cover" />
+                             <img src="/assets/pace.webp" alt="PACE Institute" className="w-full h-full object-cover" />
                         </div>
                         <span className="text-xs text-gray-400">Director, PACE Institute</span>
                     </div>

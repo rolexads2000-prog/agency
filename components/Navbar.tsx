@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <img src="/assets/rolexadslogo.png" alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" />
+            <img src="/assets/rolexadslogo.webp" alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" />
           </a>
 
           {/* Desktop Links */}

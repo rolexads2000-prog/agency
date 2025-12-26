@@ -5,14 +5,14 @@ import { WHATSAPP_NUMBER, TRANSLATIONS, SERVICES } from '../constants';
 import { useLanguage } from './LanguageContext';
 
 const CLIENTS = [
-  { name: "Sneha Super Specialty Hospital", logo: "/assets/sneha.png" },
-  { name: "KIMS Hospitals", logo: "/assets/kims.png" },
-  { name: "CMR Jewellery", logo: "/assets/cmrjewellery.png" },
-  { name: "Malabar Gold & Diamonds", logo: "/assets/malabar.png" },
-  { name: "Damro", logo: "/assets/damro.png" },
-  { name: "Canara Bank", logo: "/assets/canara.png" },
-  { name: "Synthite", logo: "/assets/synthite.png" },
-  { name: "CMR Shopping Mall", logo: "/assets/cmrmall.png" },
+  { name: "Sneha Super Specialty Hospital", logo: "/assets/sneha.webp" },
+  { name: "KIMS Hospitals", logo: "/assets/kims.webp" },
+  { name: "CMR Jewellery", logo: "/assets/cmrjewellery.webp" },
+  { name: "Malabar Gold & Diamonds", logo: "/assets/malabar.webp" },
+  { name: "Damro", logo: "/assets/damro.webp" },
+  { name: "Canara Bank", logo: "/assets/canara.webp" },
+  { name: "Synthite", logo: "/assets/synthite.webp" },
+  { name: "CMR Shopping Mall", logo: "/assets/cmrmall.webp" },
   { name: "Sri Bhavya", logo: "/assets/sribhavya.png" },
   { name: "Pace", logo: "/assets/pace.png" },
 ];

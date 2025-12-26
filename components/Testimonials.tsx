@@ -6,17 +6,15 @@ import { useLanguage } from './LanguageContext';
 
 const Testimonials: React.FC = () => {
   const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const { language } = useLanguage();
   const t = TRANSLATIONS[language].testimonials;
 
   useEffect(() => {
-    if (isPaused) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(timer);
-  }, [isPaused]);
+  }, []);
 
   const handleNext = () => {
     setIndex((prev) => (prev + 1) % TESTIMONIALS.length);
@@ -33,11 +31,7 @@ const Testimonials: React.FC = () => {
             <h2 className="text-3xl font-bold text-white">{t.title}</h2>
         </div>
 
-        <div 
-          className="relative min-h-[300px]"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
+        <div className="relative min-h-[300px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
