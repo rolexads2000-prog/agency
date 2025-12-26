@@ -179,16 +179,14 @@ const Hero: React.FC = () => {
                  >
                     <div className="relative">
                         <div className="absolute inset-0 bg-[#0ACF83]/20 rounded-[1.75rem] blur-xl scale-110 -z-10" />
-                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-[1.75rem] bg-[#1E1E1E] border-2 border-[#0ACF83] flex items-center justify-center relative overflow-hidden group">
+                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-[1.75rem] bg-[#1E1E1E] border-2 border-[#0ACF83] flex items-center justify-center relative overflow-hidden group p-0">
                             <div className="absolute inset-0 bg-gradient-to-tr from-[#0ACF83]/10 to-transparent opacity-50" />
-                            <div className="bg-white/90 p-1.5 rounded-lg">
-                              <img 
-                                src="/assets/logocoreldraw.webp" 
-                                alt="CorelDRAW" 
-                                className="w-14 h-14 md:w-16 md:h-16 object-contain relative z-10" 
-                                loading="eager"
-                              />
-                            </div>
+                            <img 
+                              src="/png.png" 
+                              alt="CorelDRAW" 
+                              className="w-full h-full object-contain relative z-10 p-4" 
+                              loading="eager"
+                            />
                         </div>
                     </div>
                  </motion.div>
@@ -343,20 +341,20 @@ const Hero: React.FC = () => {
             <motion.div 
                className="flex gap-10 md:gap-20 items-center w-max py-2"
                animate={{ x: ["-50%", "0%"] }} 
-               transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+               transition={{ ease: "linear", duration: 50, repeat: Infinity }}
                style={{ willChange: "transform" }}
             >
                {/* Quadruple list to ensure seamless looping on large screens */}
                {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
                   <div 
                     key={i} 
-                    className="flex-shrink-0 flex items-center justify-center px-8 py-4"
-                    style={{ minWidth: '180px', width: 'clamp(180px, 20vw, 260px)', height: 'clamp(110px, 14vw, 150px)' }}
+                    className="flex-shrink-0 flex items-center justify-center px-6 py-3 rounded-2xl bg-white border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300 shadow-md"
+                    style={{ minWidth: '170px', width: 'clamp(170px, 15vw, 220px)', height: 'clamp(80px, 9vw, 120px)' }}
                   >
                       <img 
                         src={client.logo} 
                         alt={client.name}
-                        className="w-full h-full object-contain opacity-100 transition-opacity duration-300" 
+                        className="w-full h-full object-contain transition-transform duration-300 hover:scale-105" 
                         loading="lazy"
                         decoding="async"
                         style={{ maxWidth: '100%', maxHeight: '100%', margin: 'auto' }}

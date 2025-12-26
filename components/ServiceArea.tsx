@@ -8,7 +8,7 @@ const TOOLS = [
   { id: 'ai', name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg', padding: false },
   { id: 'pr', name: 'Premiere Pro', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg', padding: false },
   { id: 'ae', name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg', padding: false },
-  { id: 'fi', name: 'CorelDRAW', icon: '/assets/logocoreldraw.webp', padding: true },
+  { id: 'fi', name: 'CorelDRAW', icon: '/png.png', padding: true },
   { id: 'id', name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg', padding: false },
 ];
 
