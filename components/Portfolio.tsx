@@ -46,12 +46,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
               <img 
                 src={item.imageUrl} 
                 alt={item.title[language]} 
-                className="w-full h-full object-contain md:object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
                 width="600"
                 height="400"
-                style={{ willChange: "transform" }}
+                style={{ willChange: "transform", padding: "16px" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <span className="text-rolex-red text-xs font-bold tracking-widest uppercase mb-1">{item.category[language]}</span>

@@ -219,7 +219,7 @@ const Contact: React.FC = () => {
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-rolex-red/20 transition-colors">
                             <Mail className="text-rolex-red" size={20} />
                         </div>
-                        <span className="text-sm md:text-base">rolexads@gmail.com</span>
+                        <span className="text-sm md:text-base">rolexads2000@gmail.com</span>
                     </li>
                     <li className="flex items-center gap-4 group">
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-rolex-red/20 transition-colors">
@@ -244,7 +244,10 @@ const Contact: React.FC = () => {
                         <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden flex items-center justify-center">
                              <img src="/assets/pace.webp" alt="PACE Institute" className="w-full h-full object-contain" />
                         </div>
-                        <span className="text-xs text-gray-400">Dr. P. Nageswara Rao, Director - PACE Institute</span>
+                        <div className="flex flex-col">
+                            <span className="text-xs font-semibold text-white">Dr. P. Nageswara Rao</span>
+                            <span className="text-xs text-gray-400">N.R. GROUP OF SCHOOLS</span>
+                        </div>
                     </div>
                 </div>
              </div>

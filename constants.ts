@@ -343,8 +343,8 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t5",
     name: "Dr. P. Nageswara Rao",
-    role: { en: "Director", te: "డైరెక్టర్" },
-    company: "PACE Institute",
+    role: { en: "Chairman", te: "చైర్మన్" },
+    company: "N.R. GROUP OF SCHOOLS",
     quote: { 
       en: "Outstanding work on our branding and digital presence. Rolex Ads delivered exceptional designs that truly represent our brand.", 
       te: "మా బ్రాండింగ్ మరియు డిజిటల్ ప్రెజెన్స్‌పై అద్భుతమైన పని. రోలెక్స్ యాడ్స్ మా బ్రాండ్‌ను నిజంగా ప్రాతినిధ్యం చేసే అద్భుతమైన డిజైన్‌లను అందించింది." 

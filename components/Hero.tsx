@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
 
     if (isEmail) {
         // Redirect to Mailbox
-        window.location.href = `mailto:rolexads@gmail.com?subject=New Inquiry&body=Hi, I am interested in your services. My email is ${inputValue}.`;
+        window.location.href = `mailto:rolexads2000@gmail.com?subject=New Inquiry&body=Hi, I am interested in your services. My email is ${inputValue}.`;
     } else if (isPhone) {
         // Open WhatsApp Modal for Phone Numbers
         setShowWhatsAppModal(true);
@@ -171,19 +171,25 @@ const Hero: React.FC = () => {
                  {/* Glow Effect */}
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rolex-red/10 rounded-full blur-[80px]" />
 
-                 {/* Center Piece - Figma */}
+                 {/* Center Piece - CorelDRAW */}
                  <motion.div
                     animate={{ y: [-15, 15, -15] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                  >
-                    <div className="w-28 h-28 md:w-36 md:h-36 rounded-[2rem] bg-[#1E1E1E] border-2 border-[#0ACF83] flex items-center justify-center shadow-2xl shadow-black/50 relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-[#0ACF83]/10 to-transparent opacity-50" />
-                        <img 
-                          src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" 
-                          alt="Figma" 
-                          className="w-16 h-16 md:w-20 md:h-20 object-contain relative z-10 drop-shadow-lg" 
-                        />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[#0ACF83]/20 rounded-[1.75rem] blur-xl scale-110 -z-10" />
+                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-[1.75rem] bg-[#1E1E1E] border-2 border-[#0ACF83] flex items-center justify-center relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-[#0ACF83]/10 to-transparent opacity-50" />
+                            <div className="bg-white/90 p-1.5 rounded-lg">
+                              <img 
+                                src="/assets/logocoreldraw.webp" 
+                                alt="CorelDRAW" 
+                                className="w-14 h-14 md:w-16 md:h-16 object-contain relative z-10" 
+                                loading="eager"
+                              />
+                            </div>
+                        </div>
                     </div>
                  </motion.div>
 
@@ -194,12 +200,15 @@ const Hero: React.FC = () => {
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
                     className="absolute top-0 left-4 md:-left-4 z-10"
                  >
-                    <div className="w-20 h-20 rounded-2xl bg-[#001E36] border border-white/10 flex items-center justify-center shadow-xl backdrop-blur-md hover:scale-110 transition-transform overflow-hidden">
-                         <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
-                            alt="Photoshop" 
-                            className="w-full h-full object-cover" 
-                         />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[#31A8FF]/20 rounded-xl blur-lg scale-110 -z-10" />
+                        <div className="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] rounded-xl bg-[#001E36] border border-white/10 flex items-center justify-center backdrop-blur-md hover:scale-110 transition-transform p-0 overflow-hidden">
+                             <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" 
+                                alt="Photoshop" 
+                                className="w-full h-full object-cover" 
+                             />
+                        </div>
                     </div>
                  </motion.div>
 
@@ -210,12 +219,15 @@ const Hero: React.FC = () => {
                     transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                     className="absolute top-8 right-0 md:-right-8 z-10"
                  >
-                    <div className="w-20 h-20 rounded-2xl bg-[#330000] border border-white/10 flex items-center justify-center shadow-xl backdrop-blur-md hover:scale-110 transition-transform overflow-hidden">
-                         <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
-                            alt="Illustrator" 
-                            className="w-full h-full object-cover" 
-                         />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[#FF9A00]/20 rounded-xl blur-lg scale-110 -z-10" />
+                        <div className="w-16 h-16 md:w-[4.5rem] md:h-[4.5rem] rounded-xl bg-[#330000] border border-white/10 flex items-center justify-center backdrop-blur-md hover:scale-110 transition-transform p-0 overflow-hidden">
+                             <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" 
+                                alt="Illustrator" 
+                                className="w-full h-full object-cover" 
+                             />
+                        </div>
                     </div>
                  </motion.div>
 
@@ -226,12 +238,15 @@ const Hero: React.FC = () => {
                     transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
                     className="absolute bottom-12 left-0 md:-left-8 z-10"
                  >
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#330033] border border-white/10 flex items-center justify-center shadow-xl backdrop-blur-md hover:scale-110 transition-transform overflow-hidden">
-                         <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" 
-                            alt="Premiere Pro" 
-                            className="w-full h-full object-cover" 
-                         />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[#9999FF]/20 rounded-xl blur-lg scale-110 -z-10" />
+                        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-[#330033] border border-white/10 flex items-center justify-center backdrop-blur-md hover:scale-110 transition-transform p-0 overflow-hidden">
+                             <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" 
+                                alt="Premiere Pro" 
+                                className="w-full h-full object-cover" 
+                             />
+                        </div>
                     </div>
                  </motion.div>
 
@@ -242,12 +257,15 @@ const Hero: React.FC = () => {
                     transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                     className="absolute bottom-4 right-4 md:-right-4 z-10"
                  >
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#00005B] border border-white/10 flex items-center justify-center shadow-xl backdrop-blur-md hover:scale-110 transition-transform overflow-hidden">
-                         <img 
-                            src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" 
-                            alt="After Effects" 
-                            className="w-full h-full object-cover" 
-                         />
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-[#9999FF]/20 rounded-xl blur-lg scale-110 -z-10" />
+                        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-[#00005B] border border-white/10 flex items-center justify-center backdrop-blur-md hover:scale-110 transition-transform p-0 overflow-hidden">
+                             <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" 
+                                alt="After Effects" 
+                                className="w-full h-full object-cover" 
+                             />
+                        </div>
                     </div>
                  </motion.div>
 
@@ -316,14 +334,14 @@ const Hero: React.FC = () => {
             <p className="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase">Trusted By</p>
          </div>
          
-         <div className="relative w-full overflow-hidden py-4">
-            {/* Gradients to fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
+         <div className="relative w-full overflow-hidden py-4 px-4 md:px-8">
+            {/* Gradients to fade edges - narrower to prevent covering logos */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
 
             {/* Marquee Container */}
             <motion.div 
-               className="flex gap-8 md:gap-16 items-center w-max py-2"
+               className="flex gap-10 md:gap-20 items-center w-max py-2"
                animate={{ x: ["-50%", "0%"] }} 
                transition={{ ease: "linear", duration: 25, repeat: Infinity }}
                style={{ willChange: "transform" }}
@@ -332,8 +350,8 @@ const Hero: React.FC = () => {
                {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
                   <div 
                     key={i} 
-                    className="flex-shrink-0 flex items-center justify-center p-4"
-                    style={{ width: 'clamp(120px, 15vw, 200px)', height: 'clamp(80px, 10vw, 120px)' }}
+                    className="flex-shrink-0 flex items-center justify-center px-8 py-4"
+                    style={{ minWidth: '180px', width: 'clamp(180px, 20vw, 260px)', height: 'clamp(110px, 14vw, 150px)' }}
                   >
                       <img 
                         src={client.logo} 
@@ -341,7 +359,7 @@ const Hero: React.FC = () => {
                         className="w-full h-full object-contain opacity-100 transition-opacity duration-300" 
                         loading="lazy"
                         decoding="async"
-                        style={{ maxWidth: '100%', maxHeight: '100%' }}
+                        style={{ maxWidth: '100%', maxHeight: '100%', margin: 'auto' }}
                       />
                   </div>
                ))}

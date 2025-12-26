@@ -75,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) => {
                     <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center shrink-0 text-rolex-red group-hover:bg-rolex-red/10 transition-colors">
                         <Mail size={16} />
                     </div>
-                    <a href="mailto:rolexads@gmail.com" className="hover:text-gray-900 transition-colors">rolexads@gmail.com</a>
+                    <a href="mailto:rolexads2000@gmail.com" className="hover:text-gray-900 transition-colors">rolexads2000@gmail.com</a>
                 </li>
             </ul>
           </div>

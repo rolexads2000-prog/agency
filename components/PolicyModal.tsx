@@ -67,7 +67,7 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose }) => {
                         <p>Our website may use cookies to enhance user experience. You can choose to disable cookies through your individual browser options.</p>
 
                         <h3 className="text-lg font-bold text-white mt-4 border-l-4 border-rolex-red pl-3">5. Contact Us</h3>
-                        <p>If you have any questions about this Privacy Policy, please contact us at <span className="text-white">rolexads@gmail.com</span> or via WhatsApp at <span className="text-white">9392556976</span>.</p>
+                        <p>If you have any questions about this Privacy Policy, please contact us at <span className="text-white">rolexads2000@gmail.com</span> or via WhatsApp at <span className="text-white">9392556976</span>.</p>
                     </>
                 ) : (
                     <>
