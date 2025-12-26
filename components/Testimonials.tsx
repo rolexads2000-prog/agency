@@ -35,11 +35,12 @@ const Testimonials: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: -30 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="glass-card p-10 rounded-3xl md:p-12 text-center"
+              style={{ willChange: "transform, opacity" }}
             >
               <Quote className="text-rolex-red mx-auto mb-6 opacity-50" size={48} />
               

@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import WhyUs from './components/WhyUs';
-import Testimonials from './components/Testimonials';
-import ServiceArea from './components/ServiceArea';
-import Blog from './components/Blog';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import PolicyModal, { PolicyType } from './components/PolicyModal';
 import { LanguageProvider } from './components/LanguageContext';
 import { SERVICES, WHATSAPP_NUMBER } from './constants';
+
+// Lazy load heavy components
+const Portfolio = lazy(() => import('./components/Portfolio'));
+const WhyUs = lazy(() => import('./components/WhyUs'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const ServiceArea = lazy(() => import('./components/ServiceArea'));
+const Blog = lazy(() => import('./components/Blog'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const PolicyModal = lazy(() => import('./components/PolicyModal'));
+
+import type { PolicyType } from './components/PolicyModal';
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="min-h-[200px] flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-rolex-red border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 const App: React.FC = () => {
   const [policyType, setPolicyType] = useState<PolicyType>(null);
@@ -39,19 +50,37 @@ const App: React.FC = () => {
         <main>
           <Hero />
           <Services onOpenModal={handleOpenServiceModal} />
-          <ServiceArea />
-          <Portfolio onInquire={handlePortfolioInquire} />
-          <WhyUs />
-          <Blog />
-          <Testimonials />
-          <FAQ />
-          <Contact />
+          <Suspense fallback={<LoadingFallback />}>
+            <ServiceArea />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Portfolio onInquire={handlePortfolioInquire} />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <WhyUs />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Blog />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Testimonials />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <FAQ />
+          </Suspense>
+          <Suspense fallback={<LoadingFallback />}>
+            <Contact />
+          </Suspense>
         </main>
-        <Footer 
+        <Suspense fallback={null}>
+          <Footer 
           onOpenPrivacy={() => setPolicyType('privacy')}
           onOpenTerms={() => setPolicyType('terms')}
         />
-        <PolicyModal isOpen={policyType} onClose={() => setPolicyType(null)} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <PolicyModal isOpen={policyType} onClose={() => setPolicyType(null)} />
+        </Suspense>
         <FloatingWhatsApp />
       </div>
     </LanguageProvider>

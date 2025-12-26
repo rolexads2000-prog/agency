@@ -325,7 +325,8 @@ const Hero: React.FC = () => {
             <motion.div 
                className="flex gap-12 md:gap-20 items-center w-max"
                animate={{ x: ["-50%", "0%"] }} 
-               transition={{ ease: "linear", duration: 40, repeat: Infinity }}
+               transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+               style={{ willChange: "transform" }}
             >
                {/* Quadruple list to ensure seamless looping on large screens */}
                {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (

@@ -35,21 +35,23 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
           {PORTFOLIO_ITEMS.map((item, index) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.05 }}
+              transition={{ delay: index * 0.03, duration: 0.3 }}
               layoutId={item.id}
               onClick={() => setSelectedItem(item)}
               className={`group relative rounded-2xl overflow-hidden cursor-pointer bg-black ${index === 1 || index === 4 ? 'md:col-span-1 md:row-span-1' : ''}`}
+              style={{ willChange: "transform" }}
             >
               <img 
                 src={item.imageUrl} 
                 alt={item.title[language]} 
-                className="w-full h-full object-contain md:object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-contain md:object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
                 width="600"
                 height="400"
+                style={{ willChange: "transform" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <span className="text-rolex-red text-xs font-bold tracking-widest uppercase mb-1">{item.category[language]}</span>

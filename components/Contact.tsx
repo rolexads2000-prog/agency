@@ -244,7 +244,7 @@ const Contact: React.FC = () => {
                         <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden flex items-center justify-center">
                              <img src="/assets/pace.webp" alt="PACE Institute" className="w-full h-full object-contain" />
                         </div>
-                        <span className="text-xs text-gray-400">Nageswara Rao, Director - PACE Institute</span>
+                        <span className="text-xs text-gray-400">Dr. P. Nageswara Rao, Director - PACE Institute</span>
                     </div>
                 </div>
              </div>

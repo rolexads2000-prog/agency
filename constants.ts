@@ -249,9 +249,9 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "3",
-    title: { en: "Real Estate Campaign", te: "రియల్ ఎస్టేట్ క్యాంపెయిన్" },
-    category: { en: "Lead Gen", te: "లీడ్ జనరేషన్" },
-    client: "Sri Bhavya",
+    title: { en: "Hospital Branding", te: "హాస్పిటల్ బ్రాండింగ్" },
+    category: { en: "Healthcare", te: "హెల్త్‌కేర్" },
+    client: "Bhavya Hospitals",
     imageUrl: "/assets/sribhavya.webp",
   },
   {
@@ -275,11 +275,29 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     client: "CMR Shopping Mall",
     imageUrl: "/assets/cmrmall.webp",
   },
+  {
+    id: "7",
+    title: { en: "Educational Campaign", te: "ఎడ్యుకేషనల్ క్యాంపెయిన్" },
+    category: { en: "Branding", te: "బ్రాండింగ్" },
+    client: "PACE Institute",
+    imageUrl: "/assets/pace.webp",
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
+    name: "Dr. Sarat Mallipeddi",
+    role: { en: "Medical Director", te: "మెడికల్ డైరెక్టర్" },
+    company: "Sneha Hospitals",
+    quote: { 
+      en: "Rolex Ads transformed our hospital's digital presence. Their creative designs and marketing strategies helped us reach more patients.", 
+      te: "రోలెక్స్ యాడ్స్ మా హాస్పిటల్ డిజిటల్ ప్రెజెన్స్‌ను మార్చింది. వారి క్రియేటివ్ డిజైన్‌లు మరియు మార్కెటింగ్ స్ట్రాటజీలు మాకు ఎక్కువ మంది పేషెంట్లను చేరుకోవడానికి సహాయపడ్డాయి." 
+    },
+    avatar: "https://picsum.photos/seed/sneha_face/100/100",
+  },
+  {
+    id: "t2",
     name: "M. Chandra Sekhar",
     role: { en: "Managing Director", te: "మేనేజింగ్ డైరెక్టర్" },
     company: "CMR Jewellery, Ongole",
@@ -290,7 +308,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: "https://picsum.photos/seed/cmr_face/100/100",
   },
   {
-    id: "t2",
+    id: "t3",
     name: "Dr. Bhaskar Rao",
     role: { en: "Medical Director", te: "మెడికల్ డైరెక్టర్" },
     company: "KIMS Hospitals",
@@ -301,7 +319,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: "https://picsum.photos/seed/kims_face/100/100",
   },
   {
-    id: "t3",
+    id: "t4",
     name: "K. Srinivas",
     role: { en: "Marketing Head", te: "మార్కెటింగ్ హెడ్" },
     company: "Malabar Gold",
@@ -313,20 +331,20 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: "t4",
-    name: "G. Lakshmi Narayana",
-    role: { en: "Founder", te: "వ్యవస్థాపకులు" },
-    company: "Sri Bhavya Constructions",
+    name: "Dr. Chintala Bhavya",
+    role: { en: "Managing Director", te: "మేనేజింగ్ డైరెక్టర్" },
+    company: "Bhavya Hospitals",
     quote: { 
-      en: "Excellent flex printing designs. We use Rolex Ads for all our construction site hoardings in Kandukur.", 
-      te: "అద్భుతమైన ఫ్లెక్స్ డిజైన్‌లు. కందుకూరులో మా నిర్మాణ సైట్ హోర్డింగ్‌ల కోసం మేము రోలెక్స్ యాడ్స్‌నే వాడుతాము." 
+      en: "Excellent flex printing designs. We use Rolex Ads for all our hospital branding and promotional materials.", 
+      te: "అద్భుతమైన ఫ్లెక్స్ డిజైన్‌లు. మా హాస్పిటల్ బ్రాండింగ్ మరియు ప్రమోషనల్ మెటీరియల్స్ కోసం మేము రోలెక్స్ యాడ్స్‌నే వాడుతాము." 
     },
     avatar: "https://picsum.photos/seed/bhavya_face/100/100",
   },
   {
     id: "t5",
-    name: "R. Venkat Reddy",
-    role: { en: "", te: "" },
-    company: "Pace",
+    name: "Dr. P. Nageswara Rao",
+    role: { en: "Director", te: "డైరెక్టర్" },
+    company: "PACE Institute",
     quote: { 
       en: "Outstanding work on our branding and digital presence. Rolex Ads delivered exceptional designs that truly represent our brand.", 
       te: "మా బ్రాండింగ్ మరియు డిజిటల్ ప్రెజెన్స్‌పై అద్భుతమైన పని. రోలెక్స్ యాడ్స్ మా బ్రాండ్‌ను నిజంగా ప్రాతినిధ్యం చేసే అద్భుతమైన డిజైన్‌లను అందించింది." 

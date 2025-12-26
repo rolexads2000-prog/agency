@@ -34,9 +34,15 @@ export default defineConfig(({ mode }) => {
         terserOptions: {
           compress: {
             drop_console: true,
-            drop_debugger: true
+            drop_debugger: true,
+            pure_funcs: ['console.log', 'console.info', 'console.debug']
           }
-        }
+        },
+        reportCompressedSize: false,
+        chunkSizeWarningLimit: 1000
+      },
+      optimizeDeps: {
+        include: ['react', 'react-dom']
       }
     };
 });
