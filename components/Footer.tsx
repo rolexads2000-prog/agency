@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) => {
           {/* Brand Info - Aligned with Navbar Logo */}
           <div className="space-y-6">
             <a href="#" className="block">
-                <img src="/assets/rolexadslogo.webp" alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="/assets/rolexadslogo.webp" alt="Rolex Ads" className="h-10 md:h-12 w-auto object-contain" loading="lazy" width="200" height="50" />
             </a>
             <p className="text-gray-600 text-sm font-medium leading-relaxed max-w-xs uppercase tracking-wide">
                 {t.tagline}

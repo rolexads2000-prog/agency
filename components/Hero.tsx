@@ -336,6 +336,9 @@ const Hero: React.FC = () => {
                         // INCREASED SIZE & REMOVED GRAYSCALE
                         className="h-16 md:h-24 w-auto object-contain opacity-100 transition-opacity duration-300" 
                         loading="lazy"
+                        decoding="async"
+                        width="150"
+                        height="96"
                       />
                   </div>
                ))}
