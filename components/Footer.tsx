@@ -83,7 +83,12 @@ const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200 text-xs text-gray-600 gap-4">
-            <p className="text-center md:text-left">&copy; {new Date().getFullYear()} Rolex Ads. {t.rights}</p>
+            <div className="flex flex-col items-center md:items-start gap-2">
+                <p className="text-center md:text-left">&copy; {new Date().getFullYear()} Rolex Ads. {t.rights}</p>
+                <p className="text-center md:text-left text-gray-500">
+                    Website made by <a href="https://mediamanager4u.com" target="_blank" rel="noopener noreferrer" className="hover:text-rolex-red transition-colors">mediamanager4u.com</a>
+                </p>
+            </div>
             <div className="flex flex-wrap justify-center items-center gap-6">
                 <button onClick={onOpenPrivacy} className="hover:text-rolex-red transition-colors">{t.privacy}</button>
                 <button onClick={onOpenTerms} className="hover:text-rolex-red transition-colors">{t.terms}</button>
