@@ -40,12 +40,12 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
               transition={{ delay: index * 0.05 }}
               layoutId={item.id}
               onClick={() => setSelectedItem(item)}
-              className={`group relative rounded-2xl overflow-visible cursor-pointer ${index === 1 || index === 4 ? 'md:col-span-1 md:row-span-1' : ''}`}
+              className={`group relative rounded-2xl overflow-hidden cursor-pointer bg-black ${index === 1 || index === 4 ? 'md:col-span-1 md:row-span-1' : ''}`}
             >
               <img 
                 src={item.imageUrl} 
                 alt={item.title[language]} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-contain md:object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
                 width="600"
@@ -74,8 +74,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ onInquire }) => {
               className="bg-[#111] w-full max-w-4xl rounded-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col md:flex-row"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="md:w-1/2 bg-black h-64 md:h-auto">
-                <img src={selectedItem.imageUrl} alt={selectedItem.title[language]} className="w-full h-full object-cover" />
+              <div className="md:w-1/2 bg-black h-64 md:h-auto flex items-center justify-center">
+                <img src={selectedItem.imageUrl} alt={selectedItem.title[language]} className="w-full h-full object-contain md:object-cover" />
               </div>
               <div className="md:w-1/2 p-8 flex flex-col justify-between">
                 <div>

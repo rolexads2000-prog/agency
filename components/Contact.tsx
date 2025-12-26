@@ -241,8 +241,8 @@ const Contact: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-rolex-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <p className="text-white italic text-sm relative z-10">"{t.quoteText}"</p>
                     <div className="mt-4 flex items-center gap-3 relative z-10">
-                        <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden">
-                             <img src="/assets/pace.webp" alt="PACE Institute" className="w-full h-full object-cover" />
+                        <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden flex items-center justify-center">
+                             <img src="/assets/pace.webp" alt="PACE Institute" className="w-full h-full object-contain" />
                         </div>
                         <span className="text-xs text-gray-400">Director, PACE Institute</span>
                     </div>
