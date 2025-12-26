@@ -316,30 +316,32 @@ const Hero: React.FC = () => {
             <p className="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase">Trusted By</p>
          </div>
          
-         <div className="relative w-full overflow-hidden">
+         <div className="relative w-full overflow-hidden py-4">
             {/* Gradients to fade edges */}
             <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-r from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-gradient-to-l from-[#0B0B0B] to-transparent z-10 pointer-events-none" />
 
             {/* Marquee Container */}
             <motion.div 
-               className="flex gap-12 md:gap-20 items-center w-max"
+               className="flex gap-8 md:gap-16 items-center w-max py-2"
                animate={{ x: ["-50%", "0%"] }} 
                transition={{ ease: "linear", duration: 25, repeat: Infinity }}
                style={{ willChange: "transform" }}
             >
                {/* Quadruple list to ensure seamless looping on large screens */}
                {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
-                  <div key={i} className="flex-shrink-0 relative group">
+                  <div 
+                    key={i} 
+                    className="flex-shrink-0 flex items-center justify-center p-4"
+                    style={{ width: 'clamp(120px, 15vw, 200px)', height: 'clamp(80px, 10vw, 120px)' }}
+                  >
                       <img 
                         src={client.logo} 
                         alt={client.name}
-                        // INCREASED SIZE & REMOVED GRAYSCALE
-                        className="h-16 md:h-24 w-auto object-contain opacity-100 transition-opacity duration-300" 
+                        className="w-full h-full object-contain opacity-100 transition-opacity duration-300" 
                         loading="lazy"
                         decoding="async"
-                        width="150"
-                        height="96"
+                        style={{ maxWidth: '100%', maxHeight: '100%' }}
                       />
                   </div>
                ))}
